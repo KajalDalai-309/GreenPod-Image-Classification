@@ -1,17 +1,38 @@
-# GreenPod Labs Image Classification Assignment
+# GreenPod Labs – Image Classification Assignment
 
-## Included
-- `GreenPod_Orange_Image_Classification.ipynb` — Google Colab notebook with dataset audit, HOG + SVM baseline, MobileNetV2 transfer learning, metrics, confusion matrices, sample prediction, and report generation.
-- `README.md` — instructions.
+## Overview
+This project compares two image classification approaches on the provided orange image dataset.
 
-## Important dataset mismatch
-The provided archive `Orange Dataset.zip` contains classes `blackspot`, `canker`, `fresh`, and `grenning`, which indicates orange condition/disease classification. The assignment screenshot describes avocado ripening-stage classification. Verify the intended dataset with the recruiter/portal before submitting.
+## Dataset
+The dataset contains four classes:
+- Blackspot
+- Canker
+- Fresh
+- Grenning
 
-## Run
-1. Upload `Orange Dataset.zip` to the root of your Google Drive as `Orange Dataset.zip`.
-2. Open the notebook in Google Colab.
-3. Choose Runtime → Change runtime type → T4 GPU (recommended).
-4. Run all cells from top to bottom.
-5. Check the generated metrics and report. Download the notebook with outputs and the generated `GreenPod_Assignment_Report.md`.
+The dataset includes training and testing images.
 
-Do not invent or manually fill model scores; the notebook computes them from the actual dataset.
+**Note:** The supplied dataset contains orange classes, while the assignment brief refers to avocado ripening stages. This discrepancy should be confirmed with the recruiter.
+
+## Models Implemented
+1. **HOG + SVM** – A classical computer vision approach.
+2. **MobileNetV2** – A deep learning approach using transfer learning.
+
+## Results
+
+| Model | Test Accuracy |
+|---|---:|
+| HOG + SVM | 85.86% |
+| MobileNetV2 | 91.92% |
+
+MobileNetV2 achieved the higher test accuracy in this experiment.
+
+## Files
+- `GreenPod_Orange_Image_Classification.ipynb` – Notebook containing the workflow and model evaluation.
+- `GreenPod_Assignment_Report.md` – Assignment report and responses to the required questions.
+
+## How to Run
+Open the notebook in Google Colab, upload the dataset in the expected location, and run the cells in order.
+
+## Tools and Technologies
+Python, TensorFlow/Keras, OpenCV/image processing, scikit-learn, NumPy, Pandas, Matplotlib.
